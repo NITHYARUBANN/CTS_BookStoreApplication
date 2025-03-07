@@ -1,0 +1,77 @@
+/* Book.css */
+body, html {
+  background-color: #2B2A4C;
+  color: #EEE2DE;
+}
+
+.book-page {
+  background-color: #2B2A4C;
+  min-height: 100vh;
+  color: #EEE2DE;
+}
+
+.search-input, .search-select {
+  background-color: #EEE2DE;
+  color: #2B2A4C;
+}
+
+.search-input::placeholder {
+  color: #2B2A4C;
+}
+
+.search-input:focus {
+  background-color: #EEE2DE;
+  color: #2B2A4C;
+}
+
+.search-button {
+  background-color: #B31312;
+  border-color: #B31312;
+}
+
+.search-button:hover {
+  background-color: #2B2A4C;
+  border-color: #2B2A4C;
+}
+
+.book-page-title {
+  color: #EEE2DE;
+}
+
+.book-card {
+  background-color: #EEE2DE;
+}
+
+.book-title {
+  color: #2B2A4C;
+}
+
+.quantity-input-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quantity-input-group .input-group-text {
+  background-color: #EEE2DE;
+  color: #2B2A4C;
+}
+
+.quantity-input {
+  max-width: 100px;
+  margin-left: 5px;
+}
+
+.add-to-cart-button {
+  background-color: #B31312;
+  border-color: #B31312;
+}
+
+.add-to-cart-button:hover {
+  background-color: #2B2A4C;
+  border-color: #2B2A4C;
+}
+
+.success-message, .error-message {
+  color: #EEE2DE;
+}
