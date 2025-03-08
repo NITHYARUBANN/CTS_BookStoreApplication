@@ -1,0 +1,410 @@
+{
+	"info": {
+		"_postman_id": "2c7aca14-6346-49d8-b976-0b3666d524f6",
+		"name": "Bookservice",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41465088"
+	},
+	"item": [
+		{
+			"name": "Addbook",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6IlJPTEVfQURNSU4iLCJzdWIiOiJKb2hubnkiLCJpYXQiOjE3NDEzNTMyODksImV4cCI6MTc0MTM1Njg4OX0.gGBLoyQIABjbQcnqXr6n15fltvR3923rMW6cRCojRNs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Game of Thrones\",\r\n    \"author\": \"George RR Martin\",\r\n    \"category\": \"Fiction\",\r\n    \"price\": 550,\r\n    \"quantity\": 60\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8011/books/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8011",
+					"path": [
+						"books",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Addbook(Unauthorized)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6IlJPTEVfQURNSU4isCJzdWIiOiJKb2hubnkiLCJpYXQiOjE3NDEzNTMyODksImV4cCI6MTc0MTM1Njg4OX0.gGBLoyQIABjbQcnqXr6n15fltvR3923rMW6cRCojRNs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"a\",\r\n    \"author\": \"da\",\r\n    \"category\": \"gF\",\r\n    \"price\": 400,\r\n    \"quantity\": 50\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8011/books/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8011",
+					"path": [
+						"books",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateBook",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6IlJPTEVfQURNSU4iLCJzdWIiOiJKb2hubnkiLCJpYXQiOjE3NDEzNTMyODksImV4cCI6MTc0MTM1Njg4OX0.gGBLoyQIABjbQcnqXr6n15fltvR3923rMW6cRCojRNs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Batman:New Knight\",\r\n    \"author\": \"Alfred\",\r\n    \"category\": \"DC Comic\",\r\n    \"price\": 400,\r\n    \"quantity\": 50\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8011/books/edit/9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8011",
+					"path": [
+						"books",
+						"edit",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletebook",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6IlJPTEVfQURNSU4iLCJzdWIiOiJKb2hubnkiLCJpYXQiOjE3NDEzNTMyODksImV4cCI6MTc0MTM1Njg4OX0.gGBLoyQIABjbQcnqXr6n15fltvR3923rMW6cRCojRNs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8011/books/delete/15",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8011",
+					"path": [
+						"books",
+						"delete",
+						"15"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteBook(Unauthorized)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJUzI1NiJ9.eyJyb2xlcyI6IlJPTEVfQURNSU4iLCJzdWIiOiJSb29iYW4iLCJpYXQiOjE3NDAxNDA1NjQsImV4cCI6MTc0MDE0NDE2NH0.iTBmPgD9ljnvNvaLUKcS5XBAuKqguw5jzJhsTjDkKHk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8011/books/delete/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8011",
+					"path": [
+						"books",
+						"delete",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getBookById",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6IlJPTEVfQURNSU4iLCJzdWIiOiJKb2hubnkiLCJpYXQiOjE3NDEzNTMyODksImV4cCI6MTc0MTM1Njg4OX0.gGBLoyQIABjbQcnqXr6n15fltvR3923rMW6cRCojRNs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8011/books/8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8011",
+					"path": [
+						"books",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "searchByCategory",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6IlJPTEVfQURNSU4iLCJzdWIiOiJKb2hubnkiLCJpYXQiOjE3NDEzNTMyODksImV4cCI6MTc0MTM1Njg4OX0.gGBLoyQIABjbQcnqXr6n15fltvR3923rMW6cRCojRNs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8011/books/search?category=Fiction",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8011",
+					"path": [
+						"books",
+						"search"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "Fiction"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllBooks",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6IlJPTEVfQ1VTVE9NRVIiLCJzdWIiOiJSYWoiLCJpYXQiOjE3NDAxNDEzMzIsImV4cCI6MTc0MDE0NDkzMn0.yySfxH34w7ikkylIWFQlaX9pwVzgBdjlv8tH8s6CL7Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8011/books/getAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8011",
+					"path": [
+						"books",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "searchByAuthor",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6IlJPTEVfQURNSU4iLCJzdWIiOiJKb2hubnkiLCJpYXQiOjE3NDEzNTMyODksImV4cCI6MTc0MTM1Njg4OX0.gGBLoyQIABjbQcnqXr6n15fltvR3923rMW6cRCojRNs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8011/books/searchByAuthor?author=JK Rowling",
+					"host": [
+						"localhost"
+					],
+					"port": "8011",
+					"path": [
+						"books",
+						"searchByAuthor"
+					],
+					"query": [
+						{
+							"key": "author",
+							"value": "JK Rowling"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "searchBook",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6IlJPTEVfQURNSU4iLCJzdWIiOiJSb29iYW4iLCJpYXQiOjE3NDEzNTM3ODAsImV4cCI6MTc0MTM1NzM4MH0.94_45nYLlGc2Q5goXUxsOTrS0NTcuV3LUzTk8dQZcDk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8011/books/searchByTitle?title=Little Women",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8011",
+					"path": [
+						"books",
+						"searchByTitle"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "Little Women"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6IlJPTEVfQ1VTVE9NRVIiLCJzdWIiOiJmYXZDdXN0b21lciIsImlhdCI6MTczOTYzNzIwMywiZXhwIjoxNzM5NjQwODAzfQ.ipCaRUFpkCLok16vIJnj-A4Zc2zFTxo1U08Y-ua0s8w",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
